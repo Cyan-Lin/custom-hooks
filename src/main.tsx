@@ -1,11 +1,12 @@
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LocalStorageHookDemo from "./pages/localStorageHookDemo.tsx";
+import App from "./App.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <>首頁，請到其他demo頁面</>,
+    element: <App />,
   },
   {
     path: "/localStorageHookDemo",
