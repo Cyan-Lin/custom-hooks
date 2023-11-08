@@ -1,22 +1,21 @@
 import { useEffect, useRef } from "react";
 
-type Props<T> = {
-  dependencyArray: T[];
-  effect: () => void;
-};
+type Callback = () => void;
+type Dependencies<T> = T[];
 
-const useUpdateEffect = <T>(props: Props<T>) => {
-  const { dependencyArray, effect } = props;
-
+const useUpdateEffect = <T>(
+  callback: Callback,
+  dependencies: Dependencies<T>
+) => {
   const isFirstRender = useRef(true);
 
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
     } else {
-      effect();
+      callback();
     }
-  }, dependencyArray);
+  }, dependencies);
 };
 
 export default useUpdateEffect;

@@ -1,7 +1,9 @@
 # custom hooks
 
 - useLocalStorage 可以使用於 計數器、toggle 等等，重整後需要保留狀態的地方，範例頁面: /localStorageHookDemo
-- useUpdateEffect 相較於 useEffect，useUpdateEffect 在 first render 不會觸發 effect (TODO: 範例)
+- useUpdateEffect 相較於 useEffect，useUpdateEffect 在 first render 不會觸發 callback，後續在 dependencies 改變的時候才觸發 callback
+- TODO: useToggle
+  參考: https://dev.to/arafat4693/15-useful-react-custom-hooks-that-you-can-use-in-any-project-2ll8#4-useupdateeffect
 
 # React + TypeScript + Vite
 
