@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LocalStorageHookDemo from "./pages/localStorageHookDemo.tsx";
 import UpdateEffectHookDemo from "./pages/updateEffectHookDemo.tsx";
 import App from "./App.tsx";
+import ToggleHookDemo from "./pages/toggleHookDemo.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/updateEffectHookDemo",
     element: <UpdateEffectHookDemo />,
+  },
+  {
+    path: "/toggleHookDemo",
+    element: <ToggleHookDemo />,
   },
 ]);
 
