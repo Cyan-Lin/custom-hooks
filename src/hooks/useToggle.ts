@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-const useToggle = (defaultValue: boolean) => {
+type ToggleType = [boolean, (value?: boolean) => void];
+
+const useToggle = (defaultValue: boolean): ToggleType => {
   const [value, setValue] = useState(defaultValue);
 
   const toggleValue = (value?: boolean) => {
