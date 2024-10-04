@@ -4,6 +4,7 @@ import LocalStorageHookDemo from "./pages/localStorageHookDemo.tsx";
 import UpdateEffectHookDemo from "./pages/updateEffectHookDemo.tsx";
 import App from "./App.tsx";
 import ToggleHookDemo from "./pages/toggleHookDemo.tsx";
+import PaginationHookDemo from "./pages/paginationHookDemo.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/toggleHookDemo",
     element: <ToggleHookDemo />,
+  },
+  {
+    path: "/paginationHookDemo",
+    element: <PaginationHookDemo />,
   },
 ]);
 
